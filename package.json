@@ -66,7 +66,9 @@
     ],
     "env": {
       "production": {
-        "only": ["app"],
+        "only": [
+          "app"
+        ],
         "plugins": [
           "transform-react-remove-prop-types",
           "transform-react-constant-elements",
@@ -74,7 +76,10 @@
         ]
       },
       "test": {
-        "plugins": ["transform-es2015-modules-commonjs", "dynamic-import-node"]
+        "plugins": [
+          "transform-es2015-modules-commonjs",
+          "dynamic-import-node"
+        ]
       }
     }
   },
@@ -87,7 +92,11 @@
       "jest": true,
       "es6": true
     },
-    "plugins": ["redux-saga", "react", "jsx-a11y"],
+    "plugins": [
+      "redux-saga",
+      "react",
+      "jsx-a11y"
+    ],
     "parserOptions": {
       "ecmaVersion": 6,
       "sourceType": "module",
@@ -96,9 +105,18 @@
       }
     },
     "rules": {
-      "arrow-parens": ["error", "always"],
-      "arrow-body-style": [2, "as-needed"],
-      "comma-dangle": [2, "always-multiline"],
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "arrow-body-style": [
+        2,
+        "as-needed"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
       "import/imports-first": 0,
       "import/newline-after-import": 0,
       "import/no-dynamic-require": 0,
@@ -128,7 +146,10 @@
       "prefer-template": 2,
       "class-methods-use-this": 0,
       "react/forbid-prop-types": 0,
-      "react/jsx-first-prop-new-line": [2, "multiline"],
+      "react/jsx-first-prop-new-line": [
+        2,
+        "multiline"
+      ],
       "react/jsx-filename-extension": 0,
       "react/jsx-no-target-blank": 0,
       "react/require-extension": 0,
@@ -157,7 +178,11 @@
       "minimist",
       "sanitize.css"
     ],
-    "include": ["core-js", "lodash", "eventsource-polyfill"]
+    "include": [
+      "core-js",
+      "lodash",
+      "eventsource-polyfill"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
@@ -175,7 +200,10 @@
         "lines": 98
       }
     },
-    "moduleDirectories": ["node_modules", "app"],
+    "moduleDirectories": [
+      "node_modules",
+      "app"
+    ],
     "moduleNameMapper": {
       ".*\\.(css|less|styl|scss|sass)$": "<rootDir>/internals/mocks/cssModule.js",
       ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/image.js"
@@ -253,6 +281,7 @@
     "json-schema-faker": "^0.4.3",
     "json-server": "^0.12.0",
     "lint-staged": "3.2.1",
+    "mongoose": "^4.11.7",
     "ngrok": "2.2.4",
     "node-plop": "0.5.4",
     "null-loader": "0.1.1",
