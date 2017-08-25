@@ -1,6 +1,5 @@
 /* eslint consistent-return:0 */
 
-const express = require('express');
 const logger = require('./logger');
 
 const argv = require('minimist')(process.argv.slice(2));
@@ -11,13 +10,10 @@ const ngrok =
     ? require('ngrok')
     : false;
 const resolve = require('path').resolve;
-const app = express();
+const app = require('./app');
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
-
-const UserController = require('./user/UserController');
-app.use('/users', UserController);
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {

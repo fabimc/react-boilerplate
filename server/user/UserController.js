@@ -14,11 +14,12 @@ router.post('/', (req, res) => {
     },
     (err, user) => {
       if (err) {
-        return res
+        res
           .status(500)
           .send('There was a problem adding the information to the database.');
+      } else {
+        res.status(200).send(user);
       }
-      res.status(200).send(user);
     }
   );
 });
@@ -27,9 +28,10 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
   User.find({}, (err, users) => {
     if (err) {
-      return res.status(500).send('There was a problem finding the users.');
+      res.status(500).send('There was a problem finding the users.');
+    } else {
+      res.status(200).send(users);
     }
-    res.status(200).send(users);
   });
 });
 module.exports = router;
